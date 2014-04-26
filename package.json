@@ -1,8 +1,15 @@
 {
-	"name": "cruzeirogram-api",
-	"main": "app.js",
-	"dependencies": {
-		"express": "~4.1.0",
-		"body-parser": "~1.0.1"
-	}
+  "name": "cruzeirogram-api",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.1.0",
+    "body-parser": "~1.0.1"
+  },
+  "version": "0.0.1",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Paulo Pires",
+  "license": "MIT"
 }
