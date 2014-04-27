@@ -7,6 +7,7 @@
 var express    = require('express'); 		// call express
 var app        = express(); 				// define our app using express
 var bodyParser = require('body-parser');
+var request    = require('request');
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -19,8 +20,15 @@ var port = process.env.PORT || 8080; 		// set our port
 var router = express.Router(); 				// get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/', function(req, res) {
-	res.json({ message: 'hooray! welcome to our api!' });	
+router.get('/cruzeiro', function(req, res) {
+  request({
+      json:true,
+      url:'https://api.instagram.com/v1/tags/cruzeiro/media/recent?client_id=48b8d07d69a64138bde5a4278e146f91'
+    }, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.json(body);
+    }
+  })
 });
 
 // more routes for our API will happen here
