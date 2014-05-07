@@ -7,7 +7,7 @@ import "fmt"
 import "io/ioutil"
 import "os"
 import "github.com/gorilla/mux"
-import "./models/instagram"
+import "./instagram"
 
 //import "labix.org/v2/mgo"
 
