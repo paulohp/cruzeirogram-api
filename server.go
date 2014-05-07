@@ -7,7 +7,9 @@ import "fmt"
 import "io/ioutil"
 import "os"
 import "github.com/gorilla/mux"
-import "labix.org/v2/mgo"
+import "./models/instagram"
+
+//import "labix.org/v2/mgo"
 
 func InstagramPicsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
